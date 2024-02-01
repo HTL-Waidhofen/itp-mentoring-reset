@@ -1,0 +1,26 @@
+﻿<Window x:Class="MentorenAppNeu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MentorenAppNeu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Menu VerticalAlignment="Top">
+            <MenuItem x:Name="Menu" Header="_Menü">
+                <MenuItem x:Name="Settings" Header="Einstellungen" Click="GoToSettings"  />
+                <MenuItem x:Name="Log" Header="Logout" Click="Logout"/>
+                <MenuItem x:Name="Info" Header="Info" Click="GoToInfo" />
+                <MenuItem x:Name="Shut" Header="Beenden" Click="Shutdown" />
+            </MenuItem>
+            <MenuItem x:Name="Ansicht" Header="_Ansicht wechseln">
+                <MenuItem  Header ="Schüler" Click="ChangeToUser"/>
+                <MenuItem  Header ="Mentor" Click="ChangeToMentor"/>
+            </MenuItem>
+        </Menu>
+
+        <Frame x:Name="mainFrame"/>
+
+    </StackPanel>
+</Window>

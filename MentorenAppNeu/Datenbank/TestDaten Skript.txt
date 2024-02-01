@@ -1,0 +1,29 @@
+INSERT INTO Benutzer (Vorname, Nachname, Rolle, Email, Passwort) VALUES
+('Max', 'Mustermann', 'Schüler', 'max.schueler@htlwy.at', 'Pass123'),
+('Anna', 'Mentorin', 'Mentor', 'anna.mentor@htlwy.at', 'Pass456'),
+('Peter', 'Lehrer', 'Mentor', 'peter.mentor@htlwy.at', 'Pass789');
+=======
+('Max', 'Mustermann', 'Schüler', 'Max.Mustermann@htlwy.at', 'Pass1230'),
+('Anna', 'Mentorin', 'Mentor', 'Anna.Mentorin@htlwy.at', 'Pass4560'),
+('Peter', 'Lehrer', 'Mentor', 'Peter.Lehrer@htlwy.at', 'Pass7890');
+
+
+INSERT INTO Faecher (Fachname) VALUES
+('Mathematik'),
+('Physik'),
+('Informatik'),
+('Chemie');
+
+INSERT INTO BenutzerFaecher (BenutzerID, FachID) VALUES
+(1, 1),
+(1, 3),
+(2, 2),
+(2, 4),
+(3, 1),
+(3, 2),
+(3, 3);
+
+INSERT INTO MentoringAnfragen (SchuelerID, MentorID, FachID, Status, Nachricht) VALUES
+(1, 2, 1, 'Offen', 'Kannst du mir bei Mathematik helfen?'),
+(2, 3, 4, 'Angenommen', 'Können wir uns nächste Woche treffen?'),
+(3, 1, 2, 'Abgelehnt', 'Vielen Dank für deine Hilfe in Physik.');

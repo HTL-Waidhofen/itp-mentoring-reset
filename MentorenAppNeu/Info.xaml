@@ -1,0 +1,40 @@
+﻿<Page x:Class="MentorenAppNeu.Info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MentorenAppNeu"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Info">
+    <Grid>
+        <StackPanel Margin="20" Background="White">
+            <TextBlock Text="Impressum" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Verantwortlich für den Inhalt:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBlock Text="Gruppe 6erTragerl im Rahmen eines ITP – Projektes 2023/24"/>
+
+            <TextBlock Text="Vertretungsberechtigte Mitglieder der Gruppe:" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock>
+             <Run Text=" - Maximilian Heschl"/><LineBreak/>
+             <Run Text=" - Silke Zauner"/><LineBreak/>
+             <Run Text=" - Ana Pop"/><LineBreak/>
+             <Run Text=" - Mayrhofer Killian"/><LineBreak/>
+             <Run Text=" - Hintsteiner Jakob"/><LineBreak/>
+             <Run Text=" - Teufel Tobias"/>
+            </TextBlock>
+
+            <TextBlock Text="Allgemeine Information:" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock Text="Unsere Anwendung bietet die Möglichkeit für Schüler, sich als Lernende und Mentoren gleichermaßen anzumelden,"/>
+            <TextBlock Text="egal, ob du Unterstützung in einem bestimmten Fach suchst oder deine Kenntnisse als Mentor teilen möchtest."/>
+
+            <TextBlock Text="Urheberrechtshinweis:" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock Text="Die Inhalte dieser Website unterliegen österreichischem Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung"/>
+            <TextBlock Text="und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung "/>
+            <TextBlock Text="der jeweiligen Autoren bzw. Erstellern."/>
+
+            <TextBlock Text="Datenschutzerklärung:" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock Text="Wir beachten die datenschutzrechtlichen Bestimmungen. Details dazu finden Sie in unserer Datenschutzerklärung (nicht)."/>
+        </StackPanel>
+    </Grid>
+</Page>

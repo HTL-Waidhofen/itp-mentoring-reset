@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/mayrh/Downloads/Datenbank Mentoren.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2554"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="0"/><expanded_item id="2" parent="0"/><expanded_item id="3" parent="0"/><expanded_item id="4" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainBenutzer"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- Tabelle für Benutzer (Schüler und Mentoren)
+CREATE TABLE Benutzer (
+    BenutzerID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Vorname TEXT NOT NULL,
+    Nachname TEXT NOT NULL,
+    Rolle TEXT NOT NULL CHECK (Rolle IN ('Mentor', 'Schüler')),
+    Email TEXT UNIQUE NOT NULL,
+    Passwort TEXT NOT NULL
+);
+
+-- Tabelle für Fächer
+CREATE TABLE Faecher (
+    FachID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Fachname TEXT UNIQUE NOT NULL
+);
+
+-- Verknüpfungstabelle für die Beziehung zwischen Benutzern und Fächern
+CREATE TABLE BenutzerFaecher (
+    BenutzerID INTEGER,
+    FachID INTEGER,
+    PRIMARY KEY (BenutzerID, FachID),
+    FOREIGN KEY (BenutzerID) REFERENCES Benutzer(BenutzerID),
+    FOREIGN KEY (FachID) REFERENCES Faecher(FachID)
+);
+
+-- Tabelle für Mentoring-Anfragen
+CREATE TABLE MentoringAnfragen (
+    AnfrageID INTEGER PRIMARY KEY AUTOINCREMENT,
+    SchuelerID INTEGER,
+    MentorID INTEGER,
+    FachID INTEGER,
+    Status TEXT NOT NULL DEFAULT 'Offen' CHECK (Status IN ('Offen', 'Angenommen', 'Abgelehnt')),
+    Nachricht TEXT,
+    FOREIGN KEY (SchuelerID) REFERENCES Benutzer(BenutzerID),
+    FOREIGN KEY (MentorID) REFERENCES Benutzer(BenutzerID),
+    FOREIGN KEY (FachID) REFERENCES Faecher(FachID)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

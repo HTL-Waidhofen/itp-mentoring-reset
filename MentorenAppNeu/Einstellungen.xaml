@@ -1,0 +1,47 @@
+﻿<Page x:Class="MentorenAppNeu.Einstellungen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MentorenAppNeu"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Einstellungen">
+
+    <StackPanel Background="White">
+
+        <Label Content="Einstellungen" FontSize="30" FontWeight="Bold" Foreground="DarkSlateBlue" HorizontalAlignment="Center"/>
+
+        <GroupBox Header="Profil">
+            <StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Vorname: " Width="80"/>
+                    <TextBox x:Name="VName" IsReadOnly="True" Width="150" Margin="3"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nachname: " Width="80"/>
+                    <TextBox x:Name="NName" IsReadOnly="True" Width="150" Margin="3"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="ID: " Width="80"/>
+                    <TextBox x:Name="ID" IsEnabled="False" Width="100" Margin="3"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="E-Mail: " Width="80"/>
+                    <TextBox x:Name="Email" IsReadOnly="True" Width="150" Margin="3"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Click="changeProfileInfo" Background="DarkSlateBlue" Foreground="White" Width="100px"  Margin="3">Ändern</Button>
+                    <Button Click="deleteProfile" Background="DarkSlateBlue" Foreground="White" Width="100px"  Margin="3">Löschen</Button>
+                </StackPanel>
+
+            </StackPanel>
+        </GroupBox>
+
+    </StackPanel>
+</Page>
